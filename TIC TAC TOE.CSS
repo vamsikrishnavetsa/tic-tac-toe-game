@@ -1,0 +1,100 @@
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    overflow: hidden;
+}
+
+/* Game Container */
+.game-container {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 40px 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Game Board */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+}
+
+.board:hover {
+    transform: scale(1.05);
+}
+
+/* Cell Styles */
+.cell {
+    background: #f4f4f4;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cell:hover {
+    background-color: #e1e1e1;
+    transform: scale(1.1);
+}
+
+.cell.X {
+    color: #ff4c4c; /* Red color for X */
+}
+
+.cell.O {
+    color: #4caf50; /* Green color for O */
+}
+
+/* Status Section */
+.status {
+    font-size: 20px;
+    color: #333;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #ff7043;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #ff5722;
+}
